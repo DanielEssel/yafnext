@@ -3,12 +3,11 @@
 import Link from "next/link";
 import { Facebook, InstagramIcon, Twitter, Linkedin } from 'lucide-react';
 
-
 export default function Footer() {
   return (
     <footer className="bg-blue-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
           
           {/* Quick Links */}
           <div>
@@ -83,7 +82,7 @@ export default function Footer() {
           <p className="text-gray-300 mb-4">
             Subscribe to our newsletter to get the latest updates and inspirational messages delivered straight to your inbox.
           </p>
-          <div className="flex justify-center items-center space-x-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4 gap-4 sm:gap-0">
             <input 
               type="email" 
               placeholder="Enter your email"

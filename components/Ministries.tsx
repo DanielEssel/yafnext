@@ -65,9 +65,19 @@ const Ministries = () => {
           {ministriesData.map((ministry, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+              className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <Image src={ministry.image} width={40} height={40} alt={ministry.name} className="w-full h-40 object-cover" />
+              {/* Image with responsive aspect ratio */}
+              <div className="relative w-full h-40">
+                <Image 
+                  src={ministry.image} 
+                  alt={ministry.name} 
+                  layout="fill" 
+                  objectFit="cover" 
+                  className="rounded-t-lg"
+                />
+              </div>
+              
               <div className="p-6">
                 <h3 className="text-2xl font-semibold text-blue-800 mb-4">{ministry.name}</h3>
                 <p className="text-gray-600 mb-4">{ministry.description}</p>
