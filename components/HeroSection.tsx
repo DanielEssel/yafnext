@@ -50,7 +50,7 @@ export default function HeroSection() {
         </motion.h1>
 
         <p className="text-blue-200 text-lg md:text-2xl max-w-3xl mx-auto mb-8 drop-shadow-md">
-          Welcome to the House of Jesus — where lives are transformed, burdens
+          Welcome to the "House of Jesus" — where lives are transformed, burdens
           are lifted, and the Word of the Lord is preached with power,
           delivering and saving many souls.
         </p>
