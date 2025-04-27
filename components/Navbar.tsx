@@ -1,8 +1,9 @@
 "use client";
 
-import Link from 'next/link';
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,21 +12,39 @@ export default function Navbar() {
     <nav className="bg-blue-900 text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          
           {/* Left side: Logo and Name */}
           <div className="flex-shrink-0 flex items-center">
-            <img className="h-8 w-auto mr-2 " src="/logos/logo.svg" alt="Logo" />
+            <Image
+              className="h-8 w-auto mr-2"
+              src="/logos/logo.svg"
+              alt="Logo"
+              width={40}
+              height={40}
+            />
+
             <span className="font-bold text-lg tracking-wide">YAFCA</span>
           </div>
 
           {/* Center: Nav Links (Desktop only) */}
           <div className="hidden md:flex space-x-4 ">
-            <Link href="/" className="hover:text-blue-400 transition">Home</Link>
-            <Link href="/about" className="hover:text-blue-400 transition">About</Link>
-            <Link href="/ministries" className="hover:text-blue-400 transition">Ministries</Link>
-            <Link href="/events" className="hover:text-blue-400 transition">Events</Link>
-            <Link href="/blog" className="hover:text-blue-400 transition">Blog</Link>
-            <Link href="/connect" className="hover:text-blue-400 transition">Connect</Link>
+            <Link href="/" className="hover:text-blue-400 transition">
+              Home
+            </Link>
+            <Link href="/about" className="hover:text-blue-400 transition">
+              About
+            </Link>
+            <Link href="/ministries" className="hover:text-blue-400 transition">
+              Ministries
+            </Link>
+            <Link href="/events" className="hover:text-blue-400 transition">
+              Events
+            </Link>
+            <Link href="/blog" className="hover:text-blue-400 transition">
+              Blog
+            </Link>
+            <Link href="/connect" className="hover:text-blue-400 transition">
+              Connect
+            </Link>
           </div>
 
           {/* Right side: Donate + Sign In/Sign Up */}
@@ -52,23 +71,37 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <div className="flex md:hidden">
-            <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-white"
+            >
               {menuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
-
         </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden px-4 pb-4 space-y-4 bg-blue-800">
-          <Link href="/" className="block hover:text-blue-300">Home</Link>
-          <Link href="/about" className="block hover:text-blue-300">About</Link>
-          <Link href="/ministries" className="block hover:text-blue-300">Ministries</Link>
-          <Link href="/events" className="block hover:text-blue-300">Events</Link>
-          <Link href="/blog" className="block hover:text-blue-300">Blog</Link>
-          <Link href="/connect" className="block hover:text-blue-300">Connect</Link>
+          <Link href="/" className="block hover:text-blue-300">
+            Home
+          </Link>
+          <Link href="/about" className="block hover:text-blue-300">
+            About
+          </Link>
+          <Link href="/ministries" className="block hover:text-blue-300">
+            Ministries
+          </Link>
+          <Link href="/events" className="block hover:text-blue-300">
+            Events
+          </Link>
+          <Link href="/blog" className="block hover:text-blue-300">
+            Blog
+          </Link>
+          <Link href="/connect" className="block hover:text-blue-300">
+            Connect
+          </Link>
 
           <div className="flex flex-col space-y-2 pt-2">
             <Link

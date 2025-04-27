@@ -4,11 +4,9 @@ import CTASection from "@/components/CTASection";
 import EventsSection from "@/components/EventsSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import Loader from "@/components/Loader";
 import Ministries from "@/components/Ministries";
 import Navbar from "@/components/Navbar";
 import Testimonies from "@/components/Testimonies";
-import SignIn from "./signin/page";
 // import Image from "next/image";
 
 

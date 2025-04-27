@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function JoinUs() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center relative">
@@ -20,28 +22,28 @@ export default function JoinUs() {
         <div className="w-1/2 flex flex-col justify-center text-white p-6">
           <h2 className="text-4xl font-semibold mb-6">Inspiration to Join</h2>
           <p className="text-lg mb-4">
-            "Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit." – Matthew 28:19
+          &quot;Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.&quot; – Matthew 28:19
           </p>
           <p className="text-lg mb-4">
-            "For where two or three are gathered in my name, there am I with them." – Matthew 18:20
+          &quot;For where two or three are gathered in my name, there am I with them.&quot; – Matthew 18:20
           </p>
           <p className="text-lg mb-4">
-            "And let us consider how we may spur one another on toward love and good deeds." – Hebrews 10:24
+          &quot;And let us consider how we may spur one another on toward love and good deeds&quot; – Hebrews 10:24
           </p>
           <p className="text-lg mb-4">
-            "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control." – Galatians 5:22-23
+          &quot;But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control.&quot; – Galatians 5:22-23
           </p>
         </div>
 
         {/* Right Side (Join Us Form) */}
         <div className="w-1/2 flex flex-col justify-center p-6 overflow-auto">
-          {/* Logo */}
-          <div className="text-center mb-6">
-            <img className="h-12 mx-auto" src="/logos/logo.svg" alt="Logo" />
+            <Image className="h-12 mx-auto" src="/logos/logo.svg" alt="Logo" width={48} height={48} priority />
+            <div className="text-center mb-6">
+            <Image className="h-12 mx-auto" src="/logos/logo.svg" alt="Logo" width={48} height={48} />
             <h2 className="text-3xl font-semibold text-blue-900 mt-4">
               Join Us Today
             </h2>
-          </div>
+            </div>
 
           {/* Join Us Form */}
           <form className="space-y-4">

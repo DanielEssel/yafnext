@@ -23,7 +23,7 @@ export default function About() {
     coreValues: {
       title: "Our Core Values",
       text: (
-        <ul className="list-disc text-lg text-gray-700 space-y-4 mx-auto">
+        <ul className="list-none text-lg text-gray-700 space-y-4 mx-auto">
           <li>Integrity: We uphold the highest standards of honesty and transparency in all our work.</li>
           <li>Compassion: We are committed to supporting and caring for others with empathy and understanding.</li>
           <li>Empowerment: We focus on providing individuals and communities with the tools and support they need to thrive.</li>
@@ -35,9 +35,9 @@ export default function About() {
   };
 
   // Function to scroll to top
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
 
   return (
     <div className="min-h-screen bg-white">
@@ -51,12 +51,12 @@ export default function About() {
           <Image
             src="/images/founder.jpg" // Replace with the founder's image
             alt="Founder"
-            width={200}
-            height={200}
-            className="rounded-full"
+            width={400}
+            height={400}
+            className="rounded-lg "
           />
           <div className="max-w-lg">
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-blue-950 align-left mb-4">
               Our founder is a visionary leader who started this organization with a passion for change. With a background in [insert background], they have dedicated their life to making a difference. Under their guidance, we continue to grow and impact lives every day.
             </p>
           </div>

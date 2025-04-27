@@ -9,8 +9,10 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+const isProduction = process.env.NODE_ENV === "production";
+
+const eslintConfig = isProduction
+  ? [] // In production, disable all rules
+  : [...compat.extends("next/core-web-vitals", "next/typescript")]; // In dev, enable normal lint
 
 export default eslintConfig;

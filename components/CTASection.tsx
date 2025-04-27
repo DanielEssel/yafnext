@@ -1,6 +1,6 @@
 export default function CTASection() {
     return (
-      <section className="py-16 bg-blue-900 text-white text-center">
+      <section className="py-16 bg-gray-700 text-white text-center">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Get Involved Today!</h2>
           <p className="mb-8 text-lg">Your support and participation can make a difference in many lives. Join us in spreading the Word and changing the world.</p>

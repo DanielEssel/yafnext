@@ -19,7 +19,7 @@ export default function Testimonies() {
           <div className="space-y-8">
             {testimonies.map((testimony, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                <p className="text-gray-700 italic">"{testimony.testimony}"</p>
+                <p className="text-gray-700 italic">&quot;{testimony.testimony}&quot;</p>
                 <p className="mt-4 font-semibold text-gray-900">{testimony.name}</p>
                 <p className="text-gray-500">{testimony.location}</p>
               </div>

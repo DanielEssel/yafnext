@@ -2,31 +2,32 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const ministriesData = [
   {
     name: "Youth Ministry",
     description: "Empowering young people to embrace their faith and make an impact in their communities.",
     link: "/ministries/youth",
-    image: "/images/youth-ministry.jpg",
+    image: "/images/ymin.jpg",
   },
   {
     name: "Evangelism Ministry",
     description: "Spreading the Good News of Jesus Christ to every corner of the globe.",
     link: "/ministries/evangelism",
-    image: "/images/evangelism-ministry.jpg",
+    image: "/images/mmin.jpg",
   },
   {
     name: "Worship Ministry",
     description: "Leading people into the presence of God through heartfelt worship and praise.",
     link: "/ministries/worship",
-    image: "/images/worship-ministry.jpg",
+    image: "/images/wmin.jpg",
   },
   {
     name: "Missionary Ministry",
     description: "Equipping missionaries to go out into the world and serve where they are most needed.",
     link: "/ministries/missionary",
-    image: "/images/missionary-ministry.jpg",
+    image: "/images/emin.jpg",
   },
 ];
 
@@ -66,7 +67,7 @@ const Ministries = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
             >
-              <img src={ministry.image} alt={ministry.name} className="w-full h-40 object-cover" />
+              <Image src={ministry.image} width={40} height={40} alt={ministry.name} className="w-full h-40 object-cover" />
               <div className="p-6">
                 <h3 className="text-2xl font-semibold text-blue-800 mb-4">{ministry.name}</h3>
                 <p className="text-gray-600 mb-4">{ministry.description}</p>

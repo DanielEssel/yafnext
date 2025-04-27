@@ -5,16 +5,16 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const images = ["/images/hero1.jpg", "/images/hero2.jpg", "/images/hero3.jpg"]; // Add 3+ images inside /public/images/
+const images = ["/images/hero1.jpg", "/images/hero2.jpg", "/images/hero3.jpg"]; // Add images inside /public/images/
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
-    return () => clearInterval(interval);
+      setCurrent((prev) => (prev + 1) % images.length); // Rotate images every 5 seconds
+    }, 5000);
+    return () => clearInterval(interval); // Clear interval on unmount
   }, []);
 
   return (
@@ -22,7 +22,7 @@ export default function HeroSection() {
       {/* Background Image Slider */}
       <div className="absolute inset-0">
         <Image
-          src="/images/backimg.jpg" // Default image
+          src={images[current]} // Dynamically switch images based on current state
           alt="Hero Background"
           fill
           style={{ objectFit: "cover" }}
@@ -50,32 +50,30 @@ export default function HeroSection() {
         </motion.h1>
 
         <p className="text-blue-200 text-lg md:text-2xl max-w-3xl mx-auto mb-8 drop-shadow-md">
-          Welcome to the "House of Jesus" — where lives are transformed, burdens
+          Welcome to the House of Jesus — where lives are transformed, burdens
           are lifted, and the Word of the Lord is preached with power,
           delivering and saving many souls.
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           {/* Join Us Button */}
-          <Link href="/joinusform">
-            <motion.a
+          <Link href="/joinusform" passHref>
+            <motion.div
               whileHover={{ scale: 1.05 }}
-              href="/connect"
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 w-52 text-center rounded-full shadow-lg transition-all duration-300"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 w-52 text-center rounded-full shadow-lg transition-all duration-300 cursor-pointer"
             >
               Join Us
-            </motion.a>
+            </motion.div>
           </Link>
 
           {/* Request A Prayer Button */}
-          <Link href="/joinusform">
-            <motion.a
+          <Link href="/prayerrequest" passHref>
+            <motion.div
               whileHover={{ scale: 1.05 }}
-              href="/connect"
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 w-52 text-center rounded-full shadow-lg transition-all duration-300"
+              className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 w-52 text-center rounded-full shadow-lg transition-all duration-300 cursor-pointer"
             >
               Request A Prayer
-            </motion.a>
+            </motion.div>
           </Link>
         </div>
       </motion.div>

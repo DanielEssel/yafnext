@@ -20,7 +20,7 @@ export default function SignUp() {
         <div className="w-1/2 flex flex-col justify-center text-black p-6">
           <h2 className="text-4xl font-semibold mb-4">Join YAFCA Today!</h2>
           <p className="text-lg">
-            We're excited to have you as part of our growing community. Start your journey with us by creating an account today.
+            We&apos;re excited to have you as part of our growing community. Start your journey with us by creating an account today.
           </p>
         </div>
 

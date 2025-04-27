@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export default function SignIn() {
   return (
@@ -20,7 +21,7 @@ export default function SignIn() {
         <div className="w-1/2 flex flex-col justify-center text-black p-6">
           <h2 className="text-4xl font-semibold mb-4">Welcome to YAFCA!</h2>
           <p className="text-lg">
-            We’re thrilled to have you here. Sign in now to get started and be part of our amazing community!
+            We&apos;re thrilled to have you here. Sign in now to get started and be part of our amazing community!
           </p>
         </div>
 
@@ -28,7 +29,7 @@ export default function SignIn() {
         <div className="w-1/2 flex flex-col justify-center p-6">
           {/* Logo */}
           <div className="text-center mb-6">
-            <img className="h-12 mx-auto" src="/logos/logo.svg" alt="Logo" />
+            <Image className="h-12 mx-auto" width={40} height={40} src="/logos/logo.svg" alt="Logo" />
             <h2 className="text-3xl font-semibold text-blue-900 mt-4">
               Sign In to Your Account
             </h2>
@@ -79,7 +80,7 @@ export default function SignIn() {
           {/* Sign Up Link */}
           <div className="text-center mt-4">
             <p className="text-sm text-gray-600">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <a href="/signup" className="text-blue-500 hover:underline">
                 Sign Up
               </a>
