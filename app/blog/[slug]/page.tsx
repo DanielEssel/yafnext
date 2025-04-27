@@ -1,3 +1,5 @@
+'use client';
+
 // pages/blog/[slug].tsx
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
